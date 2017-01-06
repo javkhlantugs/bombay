@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bombaydarbar</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class='toptop'>
+  	<div class='address'>
+  	<a href="https://www.google.com/maps/place/Bombay+Darbar/@25.7325448,-80.248559,15z/data=!4m5!3m4!1s0x0:0xce9074979c3c1c3f!8m2!3d25.7293398!4d-80.2407369" target="_blank">2901 Florida Ave, Miami, FL 33133</a>
+  	</div>
+  </div>
+    <%= yield %>
+  </body>
+</html>
