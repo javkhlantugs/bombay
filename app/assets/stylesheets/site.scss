@@ -1,8 +1,8 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-// font-family: 'Arima Madurai', cursive;
-// font-family: 'Lora', serif;
+// font-family: 'Playfair Display', serif;
+// font-family: 'Crimson Text', serif;
 
 
 //=$$==$$==$$==$$==$$==$$==$$=page top
@@ -10,12 +10,13 @@
 .toptop {
 	background-image: url("/assets/main.jpg");
 	background-size: cover;
-	background-position: center;
+	background-position: ;
 	width: 100%;
-	height: 100%;
+	height: 400px;
+	background-attachment: fixed;
 }
 .address {
-	font-family: 'Bungee Shade', cursive;
+	font-family: 'Abril Fatface', cursive;
 	margin-left: 79%;
 	position: relative;
 	top: 20px;
@@ -28,9 +29,40 @@
 //-!!--!!--!!--!!--!!--!!--!!- page top ends
 
 
+//=$$==$$==$$==$$==$$==$$==$$= what to eat
 
-body {
-	height: 100%;
+.what-to-eat {
 	width: 100%;
-	margin: 0;
+	height: 500px;
+	position: relative;
 }
+
+.time-table {
+	text-align: center;
+}
+
+.time-table div	{
+	display: inline-block;
+	text-align: center;
+	margin: 10px 3%;
+}
+
+.time-table ul{
+	padding-left: 0;
+}
+
+.time-table h3 {
+	margin-bottom: 25px;
+}
+
+.appetizer, .main-course {
+	
+	display: inline-block;
+}
+
+section div h2 {
+		text-align:center;
+	top: 50px;
+}
+
+//-!!--!!--!!--!!--!!--!!--!!- what to eat ends
