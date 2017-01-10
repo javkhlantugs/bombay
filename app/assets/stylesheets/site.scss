@@ -10,9 +10,7 @@
 .toptop {
 	background-image: url("/assets/main.jpg");
 	background-size: cover;
-	background-position: ;
 	width: 100%;
-	height: 400px;
 	background-attachment: fixed;
 }
 .address {
@@ -28,14 +26,62 @@
 
 //-!!--!!--!!--!!--!!--!!--!!- page top ends
 
+//=$$==$$==$$==$$==$$==$$==$$=About us
 
-//=$$==$$==$$==$$==$$==$$==$$= what to eat
-
-.what-to-eat {
+.about-us {
+	height: 650px;
 	width: 100%;
-	height: 500px;
 	position: relative;
+	margin-bottom:100px;
+	
 }
+
+.about-us-text, .about-us-image {
+	display: inline-block;
+}
+
+.about-us-text {
+	width: 50%;
+	text-align: right;
+	right: 5%;
+	position: absolute;
+	font-size: 30px;
+	background-image: url('/assets/us-background.jpg');
+	background-size: cover;
+	color: white;
+	height: 80%;
+}
+
+.about-us-text p, .about-us-text h6 {
+	margin-right: 40px;
+
+}
+
+.about-us-text p {
+	margin-left: 40px;
+}
+
+.about-us img {
+	width: 30%;
+	position: relative;
+	left: 19%;
+	z-index: 1;
+	top: 50%;
+}
+
+//-!!--!!--!!--!!--!!--!!--!!- About us ends
+
+
+
+
+
+//=$$==$$==$$==$$==$$==$$==$$= HOURS
+.hours-section {
+	position: relative;
+	padding: 50px 0;
+	background-color: #f8f5ed;
+}
+
 
 .time-table {
 	text-align: center;
@@ -55,14 +101,14 @@
 	margin-bottom: 25px;
 }
 
-.appetizer, .main-course {
-	
-	display: inline-block;
+.hours h2 {
+	margin-top: 0;
+	text-align: center;
 }
 
-section div h2 {
-		text-align:center;
-	top: 50px;
-}
 
-//-!!--!!--!!--!!--!!--!!--!!- what to eat ends
+
+//-!!--!!--!!--!!--!!--!!--!!- HORSends
+
+
+ 
