@@ -15,6 +15,9 @@
   	<a href="https://www.google.com/maps/place/Bombay+Darbar/@25.7325448,-80.248559,15z/data=!4m5!3m4!1s0x0:0xce9074979c3c1c3f!8m2!3d25.7293398!4d-80.2407369" target="_blank" style="text-decoration:none;">2901 Florida Ave, Miami, FL 33133</a>
   	<p>(305)444-7272</p>
   </div>
+  <% if content_for?(:navbar) %>
+    <%= yield(:navbar) %>
+    <% else %>
   	<nav class="js-sticky-nav">
   		<ul >
         <div class='nav-items to-left'>
@@ -32,6 +35,7 @@
         </div>
   		</ul> 
   	</nav>
+    <% end %>
     <%= yield %>
     <footer>
     <img src="/assets/fb.png" alt='facebook logo'>

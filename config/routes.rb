@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root :to => 'site#home'
 
   get '/manager', to: 'manager#main', as: 'manager_main'
+  get '/manager/menu', to: 'manager#menu', as: 'manager_menu'
 
 end

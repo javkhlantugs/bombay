@@ -1,11 +1,11 @@
 class ManagerController < ApplicationController
-
+ 	before_action :authenticate_user!
 	def main
 		render 'main'
 	end
 
-	def non_header
-		@skip_header= true
+	def menu
+		render 'menu'
 	end
 
 end
