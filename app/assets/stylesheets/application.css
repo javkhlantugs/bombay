@@ -18,10 +18,10 @@ a { color:white } /* Globally */
 
 /* Each state */
 
-a:visited { text-decoration: none; color:white; }
+a:visited { text-decoration: none;}
 a:hover { text-decoration: none; color:blue; }
 a:focus { text-decoration: none; color:yellow; }
-a:hover, a:active { text-decoration: none; color:black }
+a:hover, a:active { text-decoration: none; color:blue }
 
 .address p {
 	margin-top: 0;

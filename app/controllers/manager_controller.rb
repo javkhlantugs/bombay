@@ -6,8 +6,10 @@ class ManagerController < ApplicationController
 
 	def menu
 		
+		@theManager = User.find_by_role('manager')
 		@menu = Menu.all
 		@a_menu = Menu.new
+		@items = MenuItem.all
 		render 'menu'
 
 	end

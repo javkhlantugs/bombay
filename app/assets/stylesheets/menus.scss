@@ -9,6 +9,7 @@
 .menu-head {
 	margin: 10px 0 !important;
 	display: inline-block;
+	color: white;
 }
 
 .menu-contents {
@@ -23,4 +24,10 @@
 
 .modal-content input {
 	width: 200px;
+}
+
+.create-new-item {
+	border: solid 1px grey;
+	color: #d3d3d3;
+	font-size: 14px;
 }

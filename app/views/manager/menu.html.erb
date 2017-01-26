@@ -1,7 +1,9 @@
 <div class='container'>
 	<div class='a-tab menu-tab menu-titles'>
 		<h2>Menu</h2>
+		<% current_menu = '' %>
 		<% @menu.each do |an_item| %>
+			<% current_menu = an_item %>
 			<div class='col col-md-6 one-menu'>
 			<div class='menu-title'>
 			<p class='menu-head'><%= an_item.name %></p>
@@ -11,32 +13,17 @@
 				</div>
 			</div>
 			<div class='menu-contents'>
-				<button type='button' class='menu-item-modal btn btn-primary' data-toggle='modal' data-target='.bs-example-modal-md' data-menu-id='<%= an_item.id %>'>Create New item</button>
+				<p><%= @items[0].name %></p>
+				<%= link_to "Create New Item", new_menu_menu_item_path(an_item), :menu_id => an_item.id, class: 'create-new-item' %>
 			</div>
 			</div>
 		<% end %>
-
-			<p data-editable class='create-new js-create-new col col-md-6'>
+			<div class='col col-md-6'>
+			<p data-editable class='create-new js-create-new'>
 			Create New
 			</p>
+			</div>
 	</div>
 
 
-</div>
-
-
-<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
-  <div class="modal-dialog modal-md" role="document">
-    <div class="modal-content">
-      <div class='container'>
-      	
-      		<p>Name</p>
-      		<input class='js-menu-name'/>
-      		<p>Price</p>
-      		<input class='js-menu-price'/>
-      		<p>Description</p>
-      		<input id='input-description' class='js-menu-description'/>
-    </div>
-    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  </div>
 </div>
