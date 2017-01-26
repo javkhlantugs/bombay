@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+
+
+gem 'rails_12factor', group: :production
+
 gem "sprockets-es6", require: "sprockets/es6"
 
 
