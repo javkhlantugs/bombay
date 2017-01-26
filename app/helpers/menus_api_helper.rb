@@ -1,0 +1,2 @@
+module MenusApiHelper
+end

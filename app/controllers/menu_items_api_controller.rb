@@ -1,0 +1,5 @@
+class MenuItemsApiController < ApplicationController
+
+	
+
+end

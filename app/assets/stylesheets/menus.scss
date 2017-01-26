@@ -1,0 +1,26 @@
+// Place all the styles related to the menus controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.menu-title {
+	background-color: black;
+}
+
+.menu-head {
+	margin: 10px 0 !important;
+	display: inline-block;
+}
+
+.menu-contents {
+	border: solid 1px black;
+}
+
+
+#input-description {
+	height: 200px;
+
+}
+
+.modal-content input {
+	width: 200px;
+}

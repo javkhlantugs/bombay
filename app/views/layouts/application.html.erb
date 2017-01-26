@@ -18,7 +18,7 @@
   </div>
   <% end %>
 
-  <% if current_page?(controller: 'site', action: 'home') %>
+  <% if current_page?('/') %>
     <%= yield(:address) %>
     <% end %>
     
@@ -37,15 +37,18 @@
         <div class='nav-items to-right'>
         <p>Hours</p>
         <p>Us</p>
+        <%= link_to "Log Out", destroy_user_session_path, :method => :delete %>
         </div>
       </ul> 
     </nav>
-            <% else %>
-    <nav class="<%= 'js-sticky-nav' if current_page?(controller: 'site', action: 'home')%>">
+      <% else %>
+
+    <nav class="<%= 'js-sticky-nav' if current_page?('/')%>">
       <ul >
         <div class='nav-items to-left'>
         <p>Contact Us</p>
           <p>Menu</p>
+          </div>
         <div class='nav-items to-center'>
         <p>HOME</p>
         </div>

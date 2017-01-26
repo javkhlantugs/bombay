@@ -5,7 +5,11 @@ class ManagerController < ApplicationController
 	end
 
 	def menu
+		
+		@menu = Menu.all
+		@a_menu = Menu.new
 		render 'menu'
+
 	end
 
 end

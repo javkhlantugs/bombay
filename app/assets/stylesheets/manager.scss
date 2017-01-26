@@ -4,5 +4,18 @@
 .a-tab {
 	text-align: center;
 	background-color:white;
+	padding: 40px 25px;
+	overflow: hidden;
+}
 
+.create-new {
+	border: 3px dashed grey;
+}
+
+
+.menu-edit-delete {
+	float: right;
+}
+.menu-titles {
+	font-size: 22px;
 }
