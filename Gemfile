@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "sprockets-es6", require: "sprockets/es6"
+
 
 gem 'font-awesome-rails'
 
