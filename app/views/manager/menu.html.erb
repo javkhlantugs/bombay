@@ -6,14 +6,24 @@
 			<% current_menu = an_item %>
 			<div class='col col-md-6 one-menu'>
 			<div class='menu-title'>
-			<p class='menu-head'><%= an_item.name %></p>
+			<p class='js-menu-head-<%=an_item.id%> menu-head'><%= an_item.name %></p>
 				<div class='menu-head menu-edit-delete'>
 					<i class="fa fa-trash-o js-menu-delete" data-menu-id='<%= an_item.id %>' aria-hidden="true"></i>
-					<i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+					<i class="fa fa-pencil-square-o js-menu-edit" data-menu-id='<%= an_item.id %>' aria-hidden="true"></i>
 				</div>
 			</div>
 			<div class='menu-contents'>
-				<p><%= @items[0].name %></p>
+			<% @items.each do |item| %>
+				<% if item.menu_id == an_item.id %>
+				<div class='single-item-<%= item.id %>'>
+				<p class='name-price'><%= item.name %>  
+					<i class="fa fa-trash-o js-menu-item-delete" data-menu-item-id='<%= item.id %>' aria-hidden="true"></i>  
+					<i class="fa fa-pencil-square-o js-menu-item-edit" data-menu-item-id='<%= item.id %>' aria-hidden="true"></i></p>
+				<p class='name-price price'><%= item.price %></p>
+				<p class='description'><em><%= item.description %></em></p>
+				</div>	
+				<% end %>
+			<% end %>
 				<%= link_to "Create New Item", new_menu_menu_item_path(an_item), :menu_id => an_item.id, class: 'create-new-item' %>
 			</div>
 			</div>

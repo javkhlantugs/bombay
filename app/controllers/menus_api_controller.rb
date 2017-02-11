@@ -18,6 +18,18 @@ class MenusApiController < ApplicationController
 		end
 	end
 
+	def update
+		@menu = Menu.find(params[:id])
+		@menu.update(menu_params)
+		
+		respond_to do |format| 
+		if @menu.save
+				format.json { render json: @new_menu}
+			else
+				format.json { render json: @new_menu.errors, status: :unprocessable_entity }
+			end
+		end
+	end
 
 	def destroy
 		menu = Menu.find(params[:id])
