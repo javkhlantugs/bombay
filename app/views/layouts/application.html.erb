@@ -13,8 +13,8 @@
   <body>
   	<% content_for :address do %>
     <div class='address'>
-    <a href="https://www.google.com/maps/place/Bombay+Darbar/@25.7325448,-80.248559,15z/data=!4m5!3m4!1s0x0:0xce9074979c3c1c3f!8m2!3d25.7293398!4d-80.2407369" target="_blank" style="text-decoration:none;">2901 Florida Ave, Miami, FL 33133</a>
-    <p>(305)444-7272</p>
+    <a href="https://www.google.com/maps/place/Los+Bandidos+Zaisan/@47.88732,106.913796,17z/data=!3m1!4b1!4m5!3m4!1s0x5d9693c24cdf99ad:0x27134a6a990cf06b!8m2!3d47.88732!4d106.91599" target="_blank" style="text-decoration:none;">Zaisan Street, Zaisan Square, 7th floor, Ulaanbaatar 17023, Mongolia</a>
+    <p>9904-4619</p>
   </div>
   <% end %>
 
@@ -25,7 +25,7 @@
 
 
     <% if current_user.present? && current_user.role == 'admin'%>
-            <nav>
+            <nav class='js-sticky-nav'>
       <ul >
         <div class='nav-items to-left'>
         <p>Contact Us</p>

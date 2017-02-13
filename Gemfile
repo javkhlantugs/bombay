@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'rails_12factor', group: :production
 
 gem "sprockets-es6", require: "sprockets/es6"
-
+gem 'rename', '~> 1.0', '>= 1.0.5'
 
 gem 'font-awesome-rails'
 
