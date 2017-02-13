@@ -15,12 +15,13 @@
 			<div class='menu-contents'>
 			<% @items.each do |item| %>
 				<% if item.menu_id == an_item.id %>
-				<div class='single-item-<%= item.id %>'>
-				<p class='name-price'><%= item.name %>  
-					<i class="fa fa-trash-o js-menu-item-delete" data-menu-item-id='<%= item.id %>' aria-hidden="true"></i>  
-					<i class="fa fa-pencil-square-o js-menu-item-edit" data-menu-item-id='<%= item.id %>' aria-hidden="true"></i></p>
-				<p class='name-price price'><%= item.price %></p>
-				<p class='description'><em><%= item.description %></em></p>
+				<% item_id = item.id %>
+				<div class='single-item-<%= item_id %>'>
+				<p class='name-price js-item-name-<%= item_id %>'><%= item.name %>  
+					<i class="fa fa-trash-o js-menu-item-delete" data-menu-item-id='<%= item_id %>' data-menu-id='<%= an_item.id %>' aria-hidden="true"></i>  
+					<i class="fa fa-pencil-square-o js-menu-item-edit" data-menu-item-id='<%= item_id %>' data-menu-id='<%= an_item.id %>' aria-hidden="true"></i></p>
+				<p class='name-price price js-item-price-<%= item_id %>'><%= item.price %></p>
+				<p class='description js-item-description-<%= item_id %>'><em><%= item.description %></em></p>
 				</div>	
 				<% end %>
 			<% end %>

@@ -6,9 +6,9 @@ $(document).on('turbolinks:load', function() {
     });
     $('.js-menu-edit').on('click', editMenu);
 
-    $('.js-menu-item-edit').on('click', showEditMenu);
+    $('.js-menu-item-edit').on('click', showEditMenuItem);
 });
-
+ 
 function addNewMenu () {
 	var $el = $(this);
 	var $input = $('<input/>')
@@ -78,13 +78,37 @@ function deleteMenu () {
 }
 
 //======================================
-//Edit menu
-function showEditMenu() {
+//Edit menu item
+function showEditMenuItem() {
     var currentItemId = $(this).data('menu-item-id');
     var currentItem = $(`.single-item-${currentItemId}`);
-    var inputItem = $('<%= render "/edit" %>');
-    currentItem.replaceWith(inputItem);
+    var itemName = $(`.js-item-name-${currentItemId}`);
+    var itemPrice = $(`.js-item-price-${currentItemId}`);
+    var itemDescription = $(`.js-item-description-${currentItemId}`);
+    var $nameInput = $('<input class="name-price"/>');
+    var $priceInput = $('<input class="name-price"/>').val(itemPrice.text());
+    var $descriptionInput = $('<textarea rows="4" style="font-size:10px;width:85%"/>').val(itemDescription.text());
+    var menuID = $(this).data('menu-id');
 
+    itemName.replaceWith($nameInput);
+    itemPrice.replaceWith($priceInput);
+    itemDescription.replaceWith($descriptionInput);
+    $(currentItem).append('<button id="save">Save</button>')
+    var saveItem = function() {
+        var params = {menu_item: {name: `${$nameInput.val()}`, price: `${$priceInput.val()}`, description: `${$descriptionInput.val()}`}}
+        
+        if(confirm('Do you want to save?')) {
+            $.ajax({
+                type: 'PUT',
+                url: `/api/menus/${menuID}/menu_items/${currentItemId}`,
+                data: params,
+                success: reloadPage(),
+                error: handleError
+            });
+        }
+    }
+    $('#save').on('click', saveItem)
+    
 }
 
 //======================================
